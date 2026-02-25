@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Eco-Stream</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html, body { height: 100%; margin: 0; padding: 0; }
+        .login-bg {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #2D5016 0%, #7FBA00 100%);
+        }
+        .login-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(45,80,22,0.13);
+            padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+            max-width: 340px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.3rem;
+            color: #2D5016;
+            font-family: 'Segoe UI',sans-serif;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+        }
+        .login-logo i {
+            font-size: 1.7rem;
+            color: #7FBA00;
+        }
+        .login-card h2 {
+            margin-bottom: 1.2rem;
+            color: #2D5016;
+            font-size: 1.3rem;
+        }
+        .login-card .form-group {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .login-card label {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.97rem;
+        }
+        .login-card input[type="text"], .login-card input[type="password"] {
+            width: 100%;
+            padding: 0.6rem 0.9rem;
+            border: 1px solid #CCC;
+            border-radius: 7px;
+            font-size: 1rem;
+            background: #F5F5F5;
+            transition: border-color 0.2s;
+        }
+        .login-card input[type="text"]:focus, .login-card input[type="password"]:focus {
+            border-color: #2D5016;
+            outline: none;
+        }
+        .login-card .btn {
+            width: 100%;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 0.7rem 0;
+            border-radius: 7px;
+            margin-top: 0.5rem;
+            background: linear-gradient(90deg, #2D5016 60%, #7FBA00 100%);
+            color: #fff;
+            border: none;
+            box-shadow: 0 2px 8px rgba(45,80,22,0.08);
+            transition: background 0.2s;
+        }
+        .login-card .btn:hover {
+            background: linear-gradient(90deg, #7FBA00 0%, #2D5016 100%);
+        }
+        .login-card .create-link {
+            margin-top: 1.2rem;
+            font-size: 0.97rem;
+            width: 100%;
+            text-align: center;
+        }
+        .login-card .create-link a {
+            color: #2D5016;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        .login-card #loginMessage {
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 0.7rem;
+        }
+        @media (max-width: 600px) {
+            .login-card { padding: 1.2rem 0.5rem; max-width: 98vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-bg">
+        <div class="login-card">
+            <div class="login-logo">
+                <i class="fas fa-leaf"></i>
+                <span>Eco-Stream</span>
+            </div>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username</label>
+                    <input type="text" id="loginUsername" name="loginUsername" placeholder="Enter username" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter password" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <div id="loginMessage"></div>
+            <div class="create-link">Don't have an account? <a href="create_account.html">Create Account</a></div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="admin.js"></script>
+</body>
+</html>
