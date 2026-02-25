@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Eco-Stream</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .login-bg { min-height: 100vh; background: linear-gradient(120deg, #2D5016 0%, #7FBA00 100%); display: flex; align-items: center; justify-content: center; }
+        .login-card { background: #fff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); padding: 2rem 1.5rem; max-width: 370px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+        .login-logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.3rem; color: #2D5016; font-family: 'Segoe UI',sans-serif; font-weight: 700; margin-bottom: 1.2rem; }
+        .login-logo i { font-size: 1.7rem; color: #7FBA00; }
+        .login-card h2 { margin-bottom: 1.2rem; color: #2D5016; font-size: 1.3rem; }
+        .login-card .form-group { width: 100%; margin-bottom: 1rem; }
+        .login-card label { display: block; margin-bottom: 0.3rem; color: #333; font-weight: 600; font-size: 0.97rem; }
+        .login-card input, .login-card select { width: 100%; padding: 0.6rem 0.9rem; border: 1px solid #CCC; border-radius: 7px; font-size: 1rem; background: #F5F5F5; transition: border-color 0.2s; }
+        .login-card input:focus, .login-card select:focus { border-color: #17A2B8; outline: none; }
+        .login-card .btn { width: 100%; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.5px; padding: 0.7rem 0; border-radius: 7px; margin-top: 0.5rem; }
+        .login-card .login-link { margin-top: 1.2rem; font-size: 0.97rem; }
+        .login-card .login-link a { color: #17A2B8; text-decoration: underline; }
+        .login-card #registerMessage { width: 100%; text-align: center; font-size: 1rem; margin-top: 0.7rem; }
+        @media (max-width: 600px) { .login-card { padding: 1.2rem 0.5rem; max-width: 98vw; } }
+    </style>
+</head>
+<body>
+    <div class="login-bg">
+        <div class="login-card">
+            <div class="login-logo">
+                <i class="fas fa-leaf"></i>
+                <span>Eco-Stream</span>
+            </div>
+            <h2>Create Account</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" name="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerCountry">Country</label>
+                    <select id="registerCountry" name="registerCountry" required>
+                        <option value="">Select Country</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="registerUsername">Username</label>
+                    <input type="text" id="registerUsername" name="registerUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" name="registerPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <div id="registerMessage"></div>
+            <div class="login-link">Already have an account? <a href="login.html">Login</a></div>
+        </div>
+    </div>
+    <script src="create_account.js"></script>
+</body>
+</html>
